@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>G.A.Z.A.L.A</title>
+  <link rel="manifest" href="/manifest.json">
+  <link rel="stylesheet" href="/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>G.A.Z.A.L.A</h1>
+      <p class="tagline">Graphical Application for Zone-based And Live Archiving</p>
+    </header>
+    
+    <main>
+      <div class="card">
+        <div class="card-header">
+          <h2>URL Capture</h2>
+          <p>Enter URLs to capture (comma or newline separated)</p>
+        </div>
+        
+        <div class="card-body">
+          <form id="urlForm">
+            <div class="form-group">
+              <label for="urls">URLs</label>
+              <textarea id="urls" name="urls" rows="8" placeholder="https://example.com, https://another.com"></textarea>
+            </div>
+            
+            <div class="form-group file-upload">
+              <label for="csvFile">Or upload CSV file</label>
+              <input type="file" id="csvFile" name="csvFile" accept=".csv">
+              <button type="button" id="addCsvBtn" class="secondary-btn">Add CSV</button>
+            </div>
+            
+            <div class="form-actions">
+              <button type="submit" id="processBtn" class="primary-btn">Process URLs</button>
+            </div>
+          </form>
+          
+          <div id="confirmation" class="hidden">
+            <p>Found <span id="urlCount">0</span> URLs to process:</p>
+            <ul id="urlList"></ul>
+            <div class="form-actions">
+              <button id="confirmBtn" class="primary-btn">Confirm & Capture</button>
+              <button id="cancelBtn" class="secondary-btn">Cancel</button>
+            </div>
+          </div>
+          
+          <div id="results" class="hidden">
+            <h3>Capture Results</h3>
+            <div id="resultList"></div>
+            <div class="form-actions">
+              <button id="downloadAllBtn" class="primary-btn">Download All Screenshots</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    
+    <footer>
+      <p class="version">Version 1.0.1 - A version that somehow works? <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" style="color: white;">Learn More</a></p>
+    </footer>
+  </div>
+  
+  <script src="/script.js"></script>
+</body>
+</html>

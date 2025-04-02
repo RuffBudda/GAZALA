@@ -1,0 +1,23 @@
+{
+    "name": "gazala",
+    "version": "1.0.0",
+    "description": "Graphical Application for Zone-based And Live Archiving",
+    "main": "app.js",
+    "scripts": {
+        "start": "node app.js",
+        "clean": "node -e \"require('fs').rmSync('node_modules', {recursive: true, force: true}); try { require('fs').unlinkSync('package-lock.json') } catch(e) {}\"",
+        "setup": "npm run clean && npm install",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "dependencies": {
+        "archiver": "^5.3.1",
+        "csv-parser": "^3.0.0",
+        "ejs": "^3.1.9",
+        "express": "^4.18.2",
+        "express-fileupload": "^1.4.0",
+        "puppeteer": "^21.11.0"
+    },
+    "engines": {
+        "node": ">=16.0.0"
+    }
+}
