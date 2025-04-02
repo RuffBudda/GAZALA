@@ -7,13 +7,6 @@ const csv = require('csv-parser');
 const archiver = require('archiver');
 const app = express();
 
-const fs = require('fs');
-const cacheDir = process.env.PUPPETEER_CACHE_DIR || '/tmp/puppeteer-cache';
-if (!fs.existsSync(cacheDir)) {
-  fs.mkdirSync(cacheDir, { recursive: true });
-}
-
-
 // Middleware
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json()); // Add this line to parse JSON requests

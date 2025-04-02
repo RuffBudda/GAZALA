@@ -7,7 +7,7 @@
         "start": "node app.js",
         "clean": "node -e \"require('fs').rmSync('node_modules', {recursive: true, force: true}); try { require('fs').unlinkSync('package-lock.json') } catch(e) {}\"",
         "setup": "npx puppeteer browsers install chrome && node app.js",
-        "postinstall": "npx puppeteer browsers install chrome",
+        "postinstall": "npx puppeteer install",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "dependencies": {
